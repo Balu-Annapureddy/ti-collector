@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IOC Search</title>
+  </head>
+  <body>
+    {% if result %}
+    <h3>IOC Found:</h3>
+    <p>URL: {{ result[1] }}</p>
+    <p>Source: {{ result[2] }}</p>
+    <p>Date Added: {{ result[3] }}</p>
+    {% else %}
+    <h3>No matching IOC found.</h3>
+    {% endif %}
+    <a href="{{ url_for('home') }}">Back to Dashboard</a>
+  </body>
+</html>

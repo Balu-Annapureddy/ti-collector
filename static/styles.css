@@ -1,0 +1,36 @@
+body { background: #f8f9fa; }
+code { background: #eef; padding: 2px 6px; border-radius: 4px; }
+.table-responsive { max-height: 60vh; overflow: auto; }
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+.card, .table {
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.vh-75 {
+  height: 75vh;
+}
+
+.card {
+  border-radius: 16px;
+  background: var(--bs-body-bg);
+}
+
+form input, form select {
+  border-radius: 10px !important;
+}
+
+form button {
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,14 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.env/
+
+# SQLite database (local only)
+iocs.db
+
+# OS-generated files
+.DS_Store
+Thumbs.db

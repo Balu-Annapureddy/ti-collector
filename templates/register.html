@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block title %}Register - TI Collector{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center vh-75">
+  <div class="card p-4 shadow-lg" style="width: 420px">
+    <h3 class="text-center mb-3">🧾 Register</h3>
+    <form method="POST" action="{{ url_for('register') }}">
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          placeholder="Choose a username"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          placeholder="Create password"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Role</label>
+        <select name="role" class="form-select" required>
+          <option value="user" selected>User</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+      <button class="btn btn-success w-100 mb-3" type="submit">Register</button>
+      <p class="text-center text-muted">
+        Already registered? <a href="{{ url_for('login') }}">Login</a>
+      </p>
+    </form>
+  </div>
+</div>
+{% endblock %}

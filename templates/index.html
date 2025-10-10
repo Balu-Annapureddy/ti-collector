@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TI Collector Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="/static/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container py-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="h4">TI Collector — Dashboard</h1>
+        <div>
+          <button id="refreshBtn" class="btn btn-sm btn-primary">
+            Refresh Now
+          </button>
+          <span id="lastRef" class="ms-3 text-muted small"></span>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-3">
+          <input
+            id="searchInput"
+            class="form-control"
+            placeholder="Search URL substring..."
+          />
+        </div>
+        <div class="col-md-2">
+          <select id="sourceFilter" class="form-select">
+            <option value="">All sources</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <input id="startDate" class="form-control" type="date" />
+        </div>
+        <div class="col-md-2">
+          <input id="endDate" class="form-control" type="date" />
+        </div>
+        <div class="col-md-3 text-end">
+          <button id="searchBtn" class="btn btn-success">Search</button>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <div class="card p-2">
+            <div>Total IOCs: <span id="totalIOCs">-</span></div>
+            <div id="sourceCounts" class="mt-2 small text-muted"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="results" class="table-responsive">
+        <table class="table table-sm table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>URL</th>
+              <th>Source</th>
+              <th>Date Added</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </div>
+
+      <nav>
+        <ul class="pagination" id="pagination"></ul>
+      </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
