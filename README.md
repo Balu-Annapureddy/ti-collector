@@ -28,23 +28,23 @@ It allows users to manage Indicators of Compromise (IOCs) like malicious URLs, w
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/ti-collector.git
+   git clone https://github.com/Balu-Annapureddy/ti-collector.git
    Navigate into the folder:
    ```
 
-bash
-Copy code
+```bash
 cd ti-collector
+```
 Install dependencies:
 
-bash
-Copy code
+```bash
 pip install -r requirements.txt
+```
 Run the app:
 
-bash
-Copy code
+```bash
 python app.py
+```
 🧑‍💻 Roles
 Admin: Can view/add/remove IOCs and manage users.
 
@@ -58,7 +58,6 @@ Real-time IOC Feed
 Role-based dashboards
 
 pgsql
-Copy code
 
 ---
 
