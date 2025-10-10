@@ -2,7 +2,7 @@ import sqlite3
 from datetime import datetime
 from flask_bcrypt import generate_password_hash, check_password_hash
 
-# FIXED: Define the database name constant, which was missing.
+# Define the database name constant.
 DB_NAME = "iocs.db"
 
 def init_db():
