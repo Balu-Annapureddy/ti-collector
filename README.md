@@ -27,30 +27,32 @@ It allows users to manage Indicators of Compromise (IOCs) like malicious URLs, w
 ## ⚙️ Setup Instructions
 
 1. Clone this repository:
-   ```bash
-   git clone https://github.com/Balu-Annapureddy/ti-collector.git
-   ```
-Navigate into the folder:
+ ```bash
+ git clone https://github.com/Balu-Annapureddy/ti-collector.git
+ ```
+2. Navigate into the folder:
 
 ```bash
 cd ti-collector
 ```
-Install dependencies:
+3. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
-Run the app:
+4. Run the app:
 
 ```bash
 python app.py
 ```
 🧑‍💻 Roles
+
 Admin: Can view/add/remove IOCs and manage users.
 
 User: Can search and view IOCs.
 
 📦 Future Enhancements
+
 API Integration with VirusTotal
 
 Real-time IOC Feed
