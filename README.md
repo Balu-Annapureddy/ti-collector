@@ -29,8 +29,8 @@ It allows users to manage Indicators of Compromise (IOCs) like malicious URLs, w
 1. Clone this repository:
    ```bash
    git clone https://github.com/Balu-Annapureddy/ti-collector.git
-   Navigate into the folder:
    ```
+Navigate into the folder:
 
 ```bash
 cd ti-collector
@@ -56,8 +56,6 @@ API Integration with VirusTotal
 Real-time IOC Feed
 
 Role-based dashboards
-
-pgsql
 
 ---
 
