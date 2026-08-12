@@ -1,6 +1,6 @@
 # ThreatCollector — Threat Intelligence Platform for IoC Collection & Search
 
-> **Status**: 🔵 Completed / Portfolio Maintained  
+> **Status**: 🔵 Completed Prototype  
 > **Target Identity**: ThreatCollector  
 > **License**: MIT License ([LICENSE](LICENSE))  
 
@@ -78,7 +78,8 @@ ti-collector/
 ├── static/                     # CSS stylesheets & client assets
 ├── templates/                  # Jinja2 HTML template views (login, admin, search)
 ├── tests/
-│   └── test_collector.py       # Automated unit test suite (4 core tests)
+│   ├── test_collector.py       # Core database & auth unit tests
+│   └── test_resilience.py      # Feed parsing & network error resilience tests
 ├── app.py                      # Flask REST API & session routing
 ├── collector.py                # Ingestion script for URLHaus, PhishTank, & MalwareBazaar
 ├── database.py                 # SQLite database schema & query functions
@@ -140,13 +141,19 @@ Open `http://localhost:5000` in your browser. Register a user or admin account t
 
 ## Testing
 
-Automated tests are located in `tests/test_collector.py` (4 unit tests covering SQLite database initialization, user authentication, IoC insertion, search querying, and route authorization).
+Automated tests are located in `tests/` (6 unit tests covering SQLite database initialization, user authentication, IoC insertion, search querying, feed parsing error resilience, and route authorization).
 
 Run the test suite:
 
 ```bash
 .\.venv\Scripts\python.exe -m unittest discover tests
 ```
+
+---
+
+## Security Audit Notice
+
+An audit of source files found no obvious hardcoded credentials. Flask secret key configuration dynamically reads `SECRET_KEY` from environment variables with local development fallbacks.
 
 ---
 
