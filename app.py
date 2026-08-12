@@ -1,11 +1,13 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from flask_bcrypt import Bcrypt
 from database import init_db, add_user, verify_user, add_ioc, get_recent, find_ioc
 import sqlite3
 
 app = Flask(__name__)
-app.secret_key = "supersecretkey"  # change this in production
+app.secret_key = os.getenv("SECRET_KEY", "supersecretkey")
 bcrypt = Bcrypt(app)
+
 
 # Initialize DB
 init_db()
