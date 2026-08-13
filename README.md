@@ -99,8 +99,9 @@ ti-collector/
 
 ```bash
 # Clone repository
-git clone https://github.com/Balu-Annapureddy/ti-collector.git
-cd ti-collector
+git clone https://github.com/Balu-Annapureddy/ThreatCollector.git
+cd ThreatCollector
+
 
 # Create virtual environment
 python -m venv .venv
