@@ -74,8 +74,9 @@ flowchart TD
 ## Repository Structure
 
 ```
-ti-collector/
+ThreatCollector/
 ├── static/                     # CSS stylesheets & client assets
+
 ├── templates/                  # Jinja2 HTML template views (login, admin, search)
 ├── tests/
 │   ├── test_collector.py       # Core database & auth unit tests
